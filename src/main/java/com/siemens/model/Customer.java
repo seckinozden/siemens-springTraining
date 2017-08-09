@@ -14,6 +14,9 @@ public class Customer {
     @OneToOne(cascade = CascadeType.ALL)
     private Department department;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    private CustmerCredential credential;
+
 
     public Customer() {
 
