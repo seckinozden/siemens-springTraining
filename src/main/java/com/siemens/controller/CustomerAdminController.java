@@ -26,9 +26,9 @@ public class CustomerAdminController {
     }
 
     @RequestMapping(value = "/customerNew", method = RequestMethod.PUT, produces = {"application/xml", "application/json"}, consumes = {"application/xml", "application/json"})
-    public Customer updateCustomerNew(@RequestBody Customer customer) {
+    public ResponseEntity<?> updateCustomerNew(@RequestBody Customer customer) {
         Customer result = customerManager.saveCustomer(customer);
-        return result;
+        return ResponseEntity.ok(result);
     }
 
 }
