@@ -1,0 +1,6 @@
+1,Ahmet,Kucuk,28
+2,Veli,Buyuk,56
+3,Hakan,Yildiz,41
+4,Murat,Yolcu,19
+5,Veli,Tutuncu,21
+6,Ahmet,Babaoglu,32
