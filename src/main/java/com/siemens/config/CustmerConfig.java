@@ -22,7 +22,6 @@ public class CustmerConfig {
     public Customer customer(){ return new Customer();}
 
     @Bean
-    @Profile("live")
     public ICustomerDao customerDao(@Value("${siemens.basic.dao.type}") EDaoType eDaoType){
         switch (eDaoType){
             case FILE: return  new FileCustomerDao();

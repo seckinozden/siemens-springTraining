@@ -1,9 +1,7 @@
 package com.siemens.model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Customer {
@@ -13,8 +11,11 @@ public class Customer {
     private String name;
     private String surname;
     private int age;
+    @OneToOne(cascade = CascadeType.ALL)
+    private Department department;
 
-    public Customer(){
+
+    public Customer() {
 
     }
 
@@ -63,5 +64,13 @@ public class Customer {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 }
